@@ -16,5 +16,17 @@
     "nodemon": "^2.0.2",
     "swagger-jsdoc": "^3.5.0",
     "swagger-ui-express": "^4.1.3"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllisonBC/AD320HotDawgTeam1.git"
+  },
+  "author": "AllisonBC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllisonBC/AD320HotDawgTeam1/issues"
+  },
+  "homepage": "https://github.com/AllisonBC/AD320HotDawgTeam1#readme",
+  "description": ""
 }

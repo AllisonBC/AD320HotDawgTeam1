@@ -1,13 +1,63 @@
+
 <html>
-
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+<meta charset="UTF-8">
+<title>Main Menu</title>
+
+    <link href="css./Styles.css" type="text/css" rel="stylesheet" >
+
+
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
 
-</html>
+<div class="container">
+    
+  <div class="nav-bar">
+      <ul>
+        <li><a href="">HOME</a> </li>
+         
+          
+            
+    
+            <li><a href="">MENU</a></li>
+            <li><a href="">LOCAL CARTS</a></li>
+            
+            
+            <li><a href="">ORDER <span class="arrow-down"></span></a>
+              <ul class="dropdown">
+                <li><a href="">Specials </a></li>
+                    <li><a href="">Cart Near You</a></li>
+                   
+              </ul>
+            </li>
+
+
+
+        </ul>
+    </div>
+    <div class="nav-mobile">
+        <div class="menu-icon">  <span></span> <span></span>  <span></span>  </div>
+
+
+    </div>
+        
+        
+      
+      
+      </div>
+    </body>
+    </html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+        $(document).ready(function(){
+          $('.menu-icon').click(function(){
+          $('.nav-bar').toggleClass('visible');
+          });
+
+        });
+
+        
+
+   </script>
+      

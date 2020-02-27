@@ -1,3 +1,4 @@
 # Handcrafted to stop committing node modules
 
 */node_modules
+/ignoregitfiles

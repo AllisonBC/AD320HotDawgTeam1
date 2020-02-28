@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Map from '../Map';
+
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Contact from '../Contact';
 import { Link } from 'react-router-dom';
@@ -30,6 +32,7 @@ class App extends Component {
             <Contact/>
         </Content>
     </Layout>
+    <Map />
 </div>
 
     );

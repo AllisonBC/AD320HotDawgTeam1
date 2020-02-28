@@ -5,6 +5,7 @@ import Landing from "../Landing";
 //import History from "../History";
 import Vendors from "../Vendors";
 import Carts from "../Carts";
+import Menu from "../Menu";
 
 const Contact = () => (
   <Switch>
@@ -13,6 +14,7 @@ const Contact = () => (
     <Route path="/contact" component={Contact} />
     <Route path="/Vendors" component={Vendors} />
     <Route path="/Carts" component={Carts} />
+    <Route path="/Menu" component={Menu} />
   </Switch>
 );
 

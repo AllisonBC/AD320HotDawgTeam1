@@ -28,11 +28,11 @@ class App extends Component {
             </Navigation>
         </Drawer>
         <Content>
-        <Map />
             <div className="page-content" />
             <Contact/>
         </Content>
     </Layout>
+    <Map />
 </div>
 
     );

@@ -4,37 +4,33 @@ import './Home.css';
 import map from '../Home/images/googleMap.png';
 
 import Header from '../Header';
+import Footer from '../Footer';
+
+
 
 const Home = ()=> {
+    
     return(
         
         <div className = "HomeWrapper">
+            <Header />
         <main className = 'HomeMain'>
-        <p><a href="https://oracleofbacon.org/" target="_blank">Kevin Bacon Kevin Bacon</a> ipsum dolor amet rump beef pork belly jerky 
-        prosciutto meatloaf landjaeger burgdoggen jowl venison. Ground round meatball pig pork jerky. 
-        Andouille porchetta t-bone brisket meatball kevin biltong shoulder, strip steak pancetta ribeye 
-        tongue venison cow frankfurter. Cow swine rump, cupim shoulder andouille corned beef strip
-        steak bresaola ground round turkey jerky filet mignon. Bresaola alcatra cupim,
-        drumstick shoulder turducken swine sirloin venison kevin.
+        <h1>Our Story</h1>
+        <p>Sup Dawg? No seriously, what's up? The fact that you are on our website tells us you are hungry,
+            and you have come to the right place! Sup Dawg was created one day out of frustration for the lack
+            of food available at 3 in the morning after a late night out. Fueled by all locally sourced ingredients
+            and constructed with love, Sup Dawg offers the best gourmet hot dogs in the entire Seattle area. Please 
+            click on the map to pick a cart and begin your order. See you soon!
+            
         </p>
-        <p>
-        Burgdoggen pork belly kielbasa jowl tri-tip pork loin buffalo fatback chislic
-        tenderloin chuck beef. Cow pancetta filet mignon kevin shankle chicken cupim short
-        ribs shoulder picanha. Rump filet mignon beef ribs tail pork chop. Drumstick beef ribs
-        corned beef sausage rump. Shank turducken brisket, sirloin salami beef pork belly doner
-        chislic rump picanha kielbasa alcatra. Ham landjaeger doner pig cupim picanha beef.
-        Chislic fatback hamburger rump, spare ribs cupim drumstick short ribs alcatra.
-        </p>    
         </main>
 
         <aside className = 'HomeMap'>
-            <h1>MAP ELEMENT GOES HERE</h1>
+            <h1>Select a cart from the map!</h1>
             <img src = {map}></img>
-        </aside> 
-        </div>   
-
-    
+        </aside>
+        <Footer /> 
+        </div>      
         )
 }
-
 export default Home;

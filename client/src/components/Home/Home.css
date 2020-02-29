@@ -1,27 +1,32 @@
 .HomeWrapper{
     width: 940px;
     margin: 0 auto;
+   
 }
 
 .HomeMain {
     float: left;
     
     margin-left: 20px;
-    margin: 20px auto;
-    background-color: aqua;
-    width: 350px;    
-    font-family: cursive;  
+    margin: 0 auto;
+    height: 500px;
+    width: 320px;    
+    background-color: aquamarine;
+    padding:10px;
+    
 }
 
 .HomeMap{
     float:right;
     width: 590px;
-    margin-top: 20px;
+    height: 500px;
+    background-color: aquamarine;
+    
 }
 
 .HomeMap img {
     width: 570px;
     margin:0 auto;
     display:block;
-    float: right;
+    
 }

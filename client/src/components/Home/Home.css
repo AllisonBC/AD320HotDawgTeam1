@@ -1,0 +1,27 @@
+.HomeWrapper{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.HomeMain {
+    float: left;
+    
+    margin-left: 20px;
+    margin: 20px auto;
+    background-color: aqua;
+    width: 350px;    
+    font-family: cursive;  
+}
+
+.HomeMap{
+    float:right;
+    width: 590px;
+    margin-top: 20px;
+}
+
+.HomeMap img {
+    width: 570px;
+    margin:0 auto;
+    display:block;
+    float: right;
+}

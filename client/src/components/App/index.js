@@ -1,19 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-import Home from '../Home';
+import './App.css';
+import MyMap from '../Map';
+
+//import Home from '../Home';
 
 
 const App = () => {
   return (
     <div className="App">
 
-        
-        <Home />    
+      <MyMap />
 
-        
-      
+
     </div>
   );
 }

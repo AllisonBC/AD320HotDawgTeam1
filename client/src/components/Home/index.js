@@ -5,6 +5,7 @@ import map from '../Home/images/googleMap.png';
 
 import Header from '../Header';
 import Footer from '../Footer';
+import MyMap from '../Map';
 
 
 
@@ -27,7 +28,7 @@ const Home = ()=> {
 
         <aside className = 'HomeMap'>
             <h1>Select a cart from the map!</h1>
-            <img src = {map}></img>
+            <MyMap />
         </aside>
         <Footer /> 
         </div>      

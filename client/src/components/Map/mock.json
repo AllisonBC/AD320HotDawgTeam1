@@ -1,0 +1,28 @@
+[{
+    "id": 1,
+    "city": "Seattle",
+    "country": "United States",
+    "countryCode": "USA",
+    "latitude": "47.620166",
+    "longitude": "-122.347864",
+    "provider": "google",
+    "state": "WA",
+    "streetName": "Broad St",
+    "streetNumber": "417",
+    "zipcode": "98109"
+  },
+  {
+    "id": 2,  
+    "city": "Bellevue",
+    "country": "United States",
+    "countryCode": "USA",
+    "latitude": "47.6101",
+    "longitude": "-122.2015",
+    "provider": "google",
+    "state": "WA",
+    "streetName": "Broad St",
+    "streetNumber": "417",
+    "zipcode": "98109"
+  }
+
+]

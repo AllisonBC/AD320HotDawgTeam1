@@ -3,14 +3,14 @@ import React from 'react';
 import './App.css';
 import MyMap from '../Map';
 
-//import Home from '../Home';
+import Home from '../Home';
 
 
 const App = () => {
   return (
     <div className="App">
 
-      <MyMap />
+      <Home />
 
 
     </div>

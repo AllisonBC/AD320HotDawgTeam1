@@ -3,26 +3,28 @@
     "city": "Seattle",
     "country": "United States",
     "countryCode": "USA",
-    "latitude": "47.620166",
-    "longitude": "-122.347864",
+    "latitude": 47.620166,
+    "longitude": -122.347864,
     "provider": "google",
     "state": "WA",
-    "streetName": "Broad St",
-    "streetNumber": "417",
-    "zipcode": "98109"
+    "address": "201 5th Avenue North",
+    "zipcode": "98109",
+    "open": "2pm",
+    "close": "2am"
   },
   {
     "id": 2,  
     "city": "Bellevue",
     "country": "United States",
     "countryCode": "USA",
-    "latitude": "47.6101",
-    "longitude": "-122.2015",
+    "latitude":   47.6101,
+    "longitude": -122.2015,
     "provider": "google",
     "state": "WA",
-    "streetName": "Broad St",
-    "streetNumber": "417",
-    "zipcode": "98109"
+    "address": "15 Bellevue Way Southeast",
+    "zipcode": "98004",
+    "open": "2pm",
+    "close": "2am"
   }
 
 ]

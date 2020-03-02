@@ -5,7 +5,6 @@ const Header = ()=>{
         <header className = "HomeHeader">
             <h1>Sup Dawg!</h1>
         </header>
-
     )
 }
 

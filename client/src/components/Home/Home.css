@@ -1,32 +1,39 @@
 .HomeWrapper{
     width: 940px;
-    margin: 0 auto;
-   
+    margin: 0 auto;  
 }
 
 .HomeMain {
-    float: left;
-    
-    margin-left: 20px;
     margin: 0 auto;
-    height: 500px;
-    width: 320px;    
-    background-color: aquamarine;
+    width: 940px;    
     padding:10px;
-    
+    background-color: rgb(75, 75, 75, .3);
+    border-radius: 25px;
 }
 
-.HomeMap{
-    float:right;
-    width: 590px;
-    height: 500px;
-    background-color: aquamarine;
-    
+h1{
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
 }
 
-.HomeMap img {
-    width: 570px;
-    margin:0 auto;
-    display:block;
-    
+h2{
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+p{
+    color: white;
+    font-size: medium;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Map{
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 40px;
 }

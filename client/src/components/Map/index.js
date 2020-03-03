@@ -61,7 +61,7 @@ export default function MyMap(){
     console.log(process.env.REACT_APP_GOOGLE_KEY);
     console.log('THIS IS MY KEY', process.env.REACT_APP_GOOGLE_KEY)
     return(
-        <div style = {{width: '400px', height: '400px', margin: '0 auto'}}>
+        <div style = {{width: '60%', height: '400px', margin: '0 auto', textAlign: 'center', alignContent: 'center'}}>
         <WrappedMap
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&
             libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}

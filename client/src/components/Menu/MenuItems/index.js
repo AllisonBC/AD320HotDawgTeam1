@@ -10,8 +10,9 @@ export default class MenuItems extends Component {
 
   render() {
     return this.props.menuItems.map((menuItem) => (
+      <div className = "item">
       <MenuItem key={menuItem.id} menuItem={menuItem} />
-  
+      </div>
     ));    
   }
 }

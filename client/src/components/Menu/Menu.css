@@ -22,7 +22,7 @@ h1{
 h2{
   margin: 0 auto;
   color: white;
-  text-align: center;
+  text-align: left;
 }
 
 p{
@@ -31,4 +31,55 @@ p{
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+
+
+.item-photo {
+  background-image: url(hotdogitemimage.jpg)
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20 px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #666;
+}
+
+.column {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  .column .item {
+      padding: em(75px);
+      max-width: 30%;
+      background: lighten(red, 45%);
+      color: #555;
+      margin-bottom: em(200px);
+      position: relative;
+      overflow: hidden;
+  }
+    .column .item .item-title {
+      color: darken(#555, 85%);
+      font-size: 24px;
+      margin: 0 0 5px 0;
+    }
+
+    .column .item-image {
+      max-width: 100%;
+    }
+
 

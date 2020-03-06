@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import '../Home/Home.css';
-import './Menu.css';
 import MenuItems from './MenuItems';
 import ShoppingCart from './ShoppingCart';
 
-
+import './Menu.css';
 
 class Menu extends Component {
   state = {
@@ -52,23 +50,62 @@ class Menu extends Component {
     price: 9,
     description: 'ingredients description',
     quantity: 0
-  }
+  },
+  {
+    id: 7,
+    name: 'Chicago Dog',
+    price: 7,
+    description: 'ingredients description',
+    quantity: 0
+  },
+  {
+    id: 8,
+    name: 'Denver Dog',
+    price: 9,
+    description: 'ingredients description',
+    quantity: 0
+  },
+  {
+
+  id: 9,
+  name: 'Chicago Dog',
+  price: 7,
+  description: 'ingredients description',
+  quantity: 0
+},
+{
+  id: 10,
+  name: 'Denver Dog',
+  price: 9,
+  description: 'ingredients description',
+  quantity: 0
+},
+{
+
+id: 11,
+name: 'Chicago Dog',
+price: 7,
+description: 'ingredients description',
+quantity: 0
+},
     ]
   }
 
   render() {
     return (
-      <div className = "HomeWrapper">   
-      <div className = "HomeMain"> 
-        <ShoppingCart />
-        <h2>MENU ITEMS</h2>
-        
-      <div className = "column">
-        <MenuItems menuItems={ this.state.menuItems } /> 
+      // <body>
+        <section className="content">
+          <div className="container">
+            <ShoppingCart />
+            <div className="menutitle">MENU ITEMS</div>
+            
+            <div className = "columns thirds">
+              <MenuItems menuItems={ this.state.menuItems } /> 
 
-      </div>
-      </div>   
-      </div>    
+          </div>
+          </div>
+        </section>
+
     );    
   }
 }

@@ -25,24 +25,22 @@ export default class QuantityIncrementor extends Component {
   render() {
     return (
 
-        <form onSubmit={this.onSubmit} style={{ display: 'flex'}}>
+        <form onSubmit={ this.onSubmit }>
           <input  
             type="number" 
-            name="quantity" 
+            id="quantity"
+            className="quantity"      
             value={ this.state.quantity }             
             onChange={ this.props.onChange }   
             min="0"          
           />
 
-          <button 
-            onClick={ this.props.incrementCount }>+</button>          
-          <button 
-            onClick={ this.props.decrementCount }>-</button> 
-          <input
-            type="submit" 
-            value="Add to cart" 
-            className="btn"
-          />
+            <input
+              type="submit" 
+              value="Add to cart" 
+              className="btn"
+            />
+
  
         </form> 
 

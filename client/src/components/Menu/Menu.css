@@ -1,85 +1,265 @@
-.HomeWrapper{
-  width: 940px;
-  margin: 0 auto;  
+body {
+  background: #fbfbf3;
+  font-family: Verdana, Tahoma, sans-serif;
+  color: black;
 }
-
-.HomeMain {
-  margin: 0 auto;
-  width: 940px;    
-  padding:10px;
-  background-color: rgb(75, 75, 75, .3);
-  border-radius: 25px;
+* {
+  transition: all .65s ease;
+  box-sizing: border-box;
 }
-
-h1{
-  margin: 0 auto;
-  color: white;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 5px;
-}
-
-h2{
-  margin: 0 auto;
-  color: white;
-  text-align: left;
-}
-
-p{
-  color: white;
-  font-size: medium;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
 .container {
   max-width: 75em;
   margin: 0 auto;
+  padding: 2em;
+}
+/* //Setting up the header so the "logo" and tagline site on each side of the header using flexbox. At 700px, they will stack.
+.header {
+  background: salmon;
+  color: white;
+  padding: .625em;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .site-title, .site-tagline {
+    font-weight: 400;
+  }
+  @media (max-width: 700px) {
+    .site-title, .site-tagline {
+      width: 100%;
+      text-align: center;
+    }
+    .site-title {
+      margin: 0;
+    }
+  }
+} */
+/* .site-title, h1, h2, h3 {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 2.6em;
+  color: darken(lightblue, 75%);
+}
+h3 {
+  font-size: 2em;
+  color: desaturate(salmon, 10%);
+}
+.site-title {
+  color: white;
+}
+.site-tagline {
+  font-size: 1em;
+  font-style: italic;
+} */
+/* // Navigation, including mobile version
+.main-nav {
+  background: yellow;
+  color: white;
+  //transition: none;
+  a {
+    color: darkblue;
+    text-decoration: none;
+  }
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    a {
+      padding: 1em 2em;
+      display: flex;
+      text-transform: uppercase;
+      &:hover, &:focus {
+        background: lighten(yellow, 25%);
+        color: lighten(darkblue, 25%);
+      }
+    }
+    .mobile-button a {
+      position: absolute;
+      left: -99999em;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    ul {
+      flex-wrap: wrap;
+       justify-content: flex-start;
+      a {
+        position: absolute;
+        left: -99999em;
+      }
+      &.open {
+        li {
+          width: 100%;
+          &.mobile-button a {
+          	background: tint(yellow, 50%);
+          	color: darken(blue, 20%);
+          }
+        }
+        a {
+          position: static;
+          
+        }
+      }
+      .mobile-button {
+        a {
+          position: static;
+        }
+      }
+    }
+    a {
+      width: 100%;
+    }
+  }
+} */
+
+.full-bleed {
+  background-size: cover;
+  min-height: 300px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 700px) {
+  .full-bleed {
+    min-height: 175px;
+  }
+}
+/* .cool-photo {
+  background-image: url(http://lorempixel.com/1300/400/abstract);
+}
+.cool-photo2 {
+  background-image: url(http://lorempixel.com/1300/400/food);
+} */
+
+
+.post {
+  padding: 2em;
 }
 
-
-
-.item-photo {
-  background-image: url(hotdogitemimage.jpg)
+.menutitle {
+  color: #dd1021;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-align: center;
 }
-
 .btn {
-  display: inline-block;
-  border: none;
-  background: #555;
-  color: #fff;
-  padding: 7px 20 px;
+  float: right;
+  border: 3px solid #dd1021;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #dd1021;
+  font-size: 14px;
+  padding: 3px 10px 3px 10px;
   cursor: pointer;
-}
 
+}
 .btn:hover {
-  background: #666;
+  border: #dd1021;
+  background: #dd1021;
+  color: #fbfbf3;
+
+}
+.quantity {
+  width: 50px;
+
 }
 
-.column {
+.columns {
   display: flex;
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  /*   .social {
+    position: absolute;
+    bottom: -60px;
+    height: 0;
+    z-index: -1;
+    font-size: 1.75em;
+  } */
 }
-  .column .item {
-      padding: em(75px);
-      max-width: 30%;
-      background: lighten(red, 45%);
-      color: #555;
-      margin-bottom: em(200px);
-      position: relative;
-      overflow: hidden;
-  }
-    .column .item .item-title {
-      color: darken(#555, 85%);
-      font-size: 24px;
-      margin: 0 0 5px 0;
-    }
+.columns .item {
+  padding: 1.75em;
+  max-width: 47%;
+  color: black;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+  /*  &:hover, &:focus {
+      background: lighten(blue, 58%);
+      border-bottom-color: salmon;
+       .social {
+        position: absolute;
+        bottom: -21px;
+        height: auto;
+        z-index: 5;
+        padding: 10px 0;
+        .fa {
+          color: salmon;
+          padding: 0 .3em;
+          &:hover {
+            color: tint(darkblue, 40%);
+          }
+        }
+      } 
+    }*/
+}
+.columns .item .item-title {
+  color: black;
+  font-size: 24px;
+  margin: 10px 5px 5px 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: left;
+}
 
-    .column .item-image {
-      max-width: 100%;
-    }
+.columns .item .item-price {
+  color: black;
+  font-size: 24px;
+  margin: 10px 5px 5px 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  float: right;
+}
+
+.columns .item .item-body {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  display: block;
+}
+.columns .item .item-image {
+  max-width: 100%;
+}
+@media (max-width: 660px) {
+  .columns .item {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.columns.thirds .item {
+  max-width: 31%;
+}
+@media (max-width: 770px) {
+  .columns.thirds .item {
+    max-width: 48%;
+  }
+}
+@media (max-width: 770px) and (max-width: 660px) {
+  .columns.thirds .item {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 
 

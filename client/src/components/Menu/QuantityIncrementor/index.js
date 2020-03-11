@@ -11,39 +11,21 @@ export default class QuantityIncrementor extends Component {
   }
 
   onChange = (event) => this.setState({ quantity: event.target.value });
-  
-
-  incrementCount = () => {
-    this.setState({ quantity: this.menuItem.quantity + 1 });    
-  }
-
-  decrementCount = () => {
-    this.setState({ quantity: this.menuItem.quantity - 1 });    
-  }
-
 
   render() {
     return (
-
-        <form onSubmit={ this.onSubmit }>
-          <input  
-            type="number" 
-            id="quantity"
-            className="quantity"      
-            value={ this.state.quantity }             
-            onChange={ this.props.onChange }   
-            min="0"          
-          />
-
-            <input
-              type="submit" 
-              value="Add to cart" 
-              className="btn"
-            />
-
- 
-        </form> 
-
+      <form onSubmit={ this.onSubmit }>
+        <input  
+          type="number" 
+          id="quantity"
+          className="quantity"  
+          min="0"
+          defaultValue="0" />
+        <input
+          type="submit" 
+          value="Add to cart" 
+          className="btn" /> 
+      </form> 
     )
   }
 }

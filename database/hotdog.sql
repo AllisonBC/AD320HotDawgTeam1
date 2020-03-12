@@ -124,7 +124,21 @@ CREATE TABLE order_add_toppings (
         ON DELETE NO ACTION					## Ideally orders will be dumped into a log before a topping is removed
 );
 
+/**
 
+## TODO: Make this a view!
+SELECT orderID, users.firstName, cartName, hotdogs.title, GROUP_CONCAT(extratoppings.title) AS `extra toppings`,
+	   quantity, glutenFree, vegan, orderPlaced, orderPaid, orderCompleted
+FROM orders
+	JOIN users USING (userID)
+    JOIN carts USING (cartID)
+    JOIN menuitems ON orders.menuItemID = menuitems.itemID
+    JOIN hotdogs USING (dogID)
+    LEFT JOIN order_add_toppings USING (orderID)
+    LEFT JOIN extratoppings USING (toppingID)
+GROUP BY orderID;
+
+**/
 
 
 

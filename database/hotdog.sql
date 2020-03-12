@@ -38,6 +38,11 @@ CREATE TABLE hotDogs (
     CONSTRAINT hotDogsPK PRIMARY KEY (dogID)
 );
 
+/*
+Menu items act as a link between carts and hot dogs
+a CART has MENU_ITEMs which each represent a HOTDOG and whether or not the cart has them available
+*/
+
 CREATE TABLE menuItems (
 	itemID int NOT NULL AUTO_INCREMENT,
     cartID int DEFAULT NULL,
@@ -61,6 +66,15 @@ CREATE TABLE users (
     UNIQUE KEY email (email)
 );
 
+/*
+This is the most complicated table, for sure
+an ORDER is placed by a USER to get one or more of a MENU_ITEM from a CART
+if they then were to get different MENU_ITEMs as well, each of those would be a different ORDER
+						TODO: Create a view that gets the full contents of a user's order, probably doing something with array
+Also contains bool fields if we wish to allow vegan and gluten free options
+Logs the time and date when an order is placed, and then the time and date when an order is paid for and completed
+*/
+
 CREATE TABLE orders (
 	orderID int NOT NULL auto_increment,
     userID int,
@@ -83,6 +97,13 @@ CREATE TABLE orders (
 		ON UPDATE CASCADE          ## if a menu item is deleted keep order information
         ON DELETE SET NULL
 );
+
+/*
+The dreaded linking table
+If a user wants additional toppings for a hot dog
+they will mark it so their ORDER will call for one or more TOPPINGs
+Then, when assembling an order it should check for each entry in order_add_toppings tied to that orderID
+*/
 
 CREATE TABLE extraToppings (
 	toppingID int NOT NULL auto_increment,

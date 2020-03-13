@@ -19,12 +19,11 @@ import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 const App = () => {
   return (
     
-    <div className="App">
-      
+    <div className="App"> 
       <Router>
       {/* Uses a transparent header that draws on top of the layout's background */}
           <div style={{height: '250px'}}>
-            <Layout style={{background: 'url(/seattlenight.jpg) center / cover'}}>
+            <Layout style={{background: 'url(/seattlenight.jpg,) center / cover'}}>
               <Header transparent title="SUP DAWG?" style={{color: 'white', margin: '0, auto'}}>
                 <Navigation>
                     <Link to="/">ORDER</Link>
@@ -50,14 +49,10 @@ const App = () => {
               </div>
             </Content> 
         </Layout>
-    <Footer />
-    </div>
-    
-
+      <Footer />
+      </div>
     </Router> 
-    
     </div>    
-    
   );
   
 }

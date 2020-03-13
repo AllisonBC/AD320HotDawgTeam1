@@ -15,6 +15,7 @@ body {
   padding: 2em;
 }
 
+/* Styling for if header image and logo used as discussed
 .full-bleed {
   background-size: cover;
   min-height: 300px;
@@ -26,7 +27,7 @@ body {
   .full-bleed {
     min-height: 175px;
   }
-}
+} */
 
 .post {
   padding: 2em;
@@ -68,35 +69,34 @@ body {
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  color: white;
 }
 
 .columns .item {
+  background-color: #271c20;
+  border-radius: 15px;
   padding: 1.75em;
   max-width: 47%;
-  color: black;
+
   margin-bottom: 2em;
   position: relative;
   overflow: hidden;
 }
 .columns .item .item-title {
-  color: black;
+
   font-size: 24px;
   margin: 10px 5px 5px 0;
-  font-family: Verdana, Tahoma, sans-serif;
   text-align: left;
 }
 
-.columns .item .item-price {
-  color: black;
-  font-size: 24px;
-  margin: 10px 5px 5px 0;
-  font-family: Verdana, Tahoma, sans-serif;
+.columns .item .item-title .item-price {
   float: right;
 }
 
 .columns .item .item-body {
   font-size: 12px;
   margin: 0 0 10px 0;
+  padding-top: 10px;
   display: block;
 }
 .columns .item .item-image {

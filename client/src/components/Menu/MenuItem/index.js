@@ -4,32 +4,24 @@ import QuantityIncrementor from '../QuantityIncrementor';
 import HotDogStockImage from "../hotdogitemimage.jpg";
 
 export default class MenuItem extends Component {
-
   render() {
     return (
-
-      <div> 
-         
-        <img src={HotDogStockImage} 
-          class="item-image" 
+      <div>          
+        <img src={ HotDogStockImage } 
+          className="item-image" 
           alt="hotdogitemimage">
         </img>   
-
         <div className = "item-title">
-          { this.props.menuItem.name }   
-          <div className = "item-price"> 
-          { this.props.menuItem.price } 
+          { this.props.menuItem.name }           
+        <div className = "item-price">
+          { this.props.menuItem.price }         
         </div>
-        </div> 
-
+        </div>
         <div className = "item-body">
           { this.props.menuItem.description }        
         </div>
-
-        <QuantityIncrementor updateQuantity={this.updateQuantity} />     
-
+        <QuantityIncrementor updateQuantity={ this.updateQuantity } />
       </div>
-
     )
   }
 }

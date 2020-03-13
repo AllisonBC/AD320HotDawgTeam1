@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import './Analytics.css';
 
 export default class Analytics extends Component {
   render() {
-    console.log('helo');
+
     return (
+      
       <h1>
-        Hello
+        Analytics
         
       </h1>
       

@@ -45,6 +45,8 @@ html, body {
 
 .adminUsername{
   color: red;
+  font-size: 16px;
+  display: block;
 }
 .nav a {
   color: #fff;
@@ -61,10 +63,4 @@ a:hover{
 
 .btn {
   padding: 0px,0px,20px,20px;
-}
-
-.map{
-  margin: 0 auto;
-  border-radius: 25px;
-  padding: 240px, 0px, 100px, 0px;
 }

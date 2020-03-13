@@ -1,65 +1,46 @@
 import React , { Component } from 'react';
-import {BrowserRouter as Router, Switch, Link} from 'react-router-dom';
-import Route from 'react-router-dom/Route';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import MyMap from '../Map';
 import OrderHistory from './OrderHistory';
 import CurrentOrders from './CurrentOrders';
 import Analytics from './Analytics';
 import CartMenu from './CartMenu';
 import UpdateLocation from './UpdateLocation';
+import SelectCart from './SelectCart';
 
 import './Admin.css';
+
 
 
 export default class Admin extends Component {
   render() {
     return (
-      
-      <div className="map">
-                
-        <Route path='/analytics' exact strict component={Analytics}/>
-      <div className="l-nav">
+      <Router>        
+        <div className="l-nav">
         <nav className="nav">           
           <ul>
-            <li className='adminUsername'>Welcome, @AdminUserName</li>
-            <li><Link to='/current_orders'>Current Orders</Link></li>
-            <li><Link to='/order_history' >Order History</Link></li>
-            <li><Link to='/cart_menu' >Cart Menu</Link></li>
-            <li><Link to='/update_location' >Update Location</Link></li>
-            {/* <li><Link to='/admin' >Select Cart</Link></li> */}
-            <li><Link to='/analytics' >Analytics</Link></li>
-
-
+            <li className='adminUsername'>Welcome,</li>
+            <li className='adminUsername'>@AdminUserName</li>
+            <Link to='/current_orders'>Current Orders</Link>
+            <Link to='/order_history' >Order History</Link>
+            <Link to='/cart_menu' >Cart Menu</Link>
+            <Link to='/update_location' >Update Location</Link>
+            <Link to='/admin' >Select Cart</Link>
+            <Link to='/analytics' replace>Analytics</Link>
           </ul>
           <input  type="submit" 
                   value="Logout"
                   className="btn" />                
         </nav>
-      </div>      
-        <MyMap className="map"/>
-        <Switch>
-        <Route path="/current_orders">
-          <CurrentOrders />
-        </Route>
-        <Route path="/order_history">
-          <OrderHistory />
-        </Route>
-        <Route path="/cart_menu">
-          <CartMenu />
-        </Route>
-        <Route path="/update_location">
-          <UpdateLocation />
-        </Route>
-        <Route path="/analytics">
-          <Analytics />
-        </Route>
-      </Switch>
-      </div>
+        </div>            
+          <Route path="/admin" component={ SelectCart }/>
+          <Route path="/current_orders" component={ CurrentOrders }/>
+          <Route path="/order_history" component={ OrderHistory }/>
+          <Route path="/cart_menu" component={ CartMenu }/>
+          <Route path="/update_location" component={ UpdateLocation }/>
+          <Route path="/analytics" component={ Analytics }/>
 
- 
-
-
+      </Router>
     );
   }
 }

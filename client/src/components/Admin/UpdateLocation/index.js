@@ -4,9 +4,10 @@ import './UpdateLocation.css';
 export default class UpdateLocation extends Component {
   render() {
     return (
-      <div>
+      <h1>
+        Update Cart Location
         
-      </div>
+      </h1>
     )
   }
 }

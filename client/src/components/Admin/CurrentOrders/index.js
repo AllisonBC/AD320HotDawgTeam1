@@ -58,10 +58,11 @@ export default class CurrentOrders extends Component {
       ] 
     }
   render() {
-    console.log('helo');
+
     return (
       <h1>
-        Hello
+        Current Orders
+        
         
       </h1>
       

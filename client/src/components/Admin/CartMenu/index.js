@@ -4,9 +4,10 @@ import './CartMenu.css'
 export default class CartMenu extends Component {
   render() {
     return (
-      <div>
+      <h1>
+        Change Cart Menu
         
-      </div>
+      </h1>
     )
   }
 }

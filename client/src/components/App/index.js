@@ -1,6 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Route from 'react-router-dom/Route';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
 import './App.css';
 
@@ -13,6 +12,7 @@ import Contact from '../Contact';
 import Footer from '../Footer';
 
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import ShoppingCart from '../Menu/ShoppingCart';
 
 //All routes are created on this page using imported components.
 
@@ -31,6 +31,7 @@ const App = () => {
                     <Link to="/about">ABOUT</Link>
                     <Link to="/contact">CONTACT</Link>
                     <Link to="/menu">MENU</Link>
+                    <Link to="/cart">CART</Link>
                 </Navigation> 
             </Header>
             <Drawer title="EMPLOYEE LINKS">
@@ -47,6 +48,7 @@ const App = () => {
                 <Route path='/admin' exact strict component={Admin}/>
                 <Route path='/vendor' exact strict component={Vendor}/>
                 <Route path='/menu' exact strict component={Menu}/>
+                <Route path='/cart' exact strict component={ShoppingCart}/>
               </div>
             </Content> 
         </Layout>

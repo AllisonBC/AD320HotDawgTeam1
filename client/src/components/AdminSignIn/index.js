@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-import "./Vendor.css";
+import "./Admin.css";
 import { Password } from "./Password";
 import { SignInPassword } from "./SignInPassword";
 import { Email } from "./Email";
 import { SignInEmail } from "./SignInEmail";
-import { VendorButton } from "./Button";
+import { ThaButton } from "./Button";
 
-export const Vendor = () => {
+export const AdminSignIn = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
@@ -44,7 +44,7 @@ export const Vendor = () => {
   const onSubmitHandler = () => {};
   return (
     <div>
-      <h1 className="adminheader">Vendor </h1>
+      <h1 className="adminheader">Admin </h1>
       <div classname="form-wrapper">
         <h2 className="adminheader"> New User ?</h2>
         <form onsubmit={onSubmitHandler}>
@@ -65,7 +65,7 @@ export const Vendor = () => {
             isValid={isSignInPasswordValid}
           />
 
-          <VendorButton />
+          <ThaButton />
         </form>
       </div>
     </div>

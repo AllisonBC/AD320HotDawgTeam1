@@ -21,10 +21,7 @@ export default class QuantityIncrementor extends Component {
           className="quantity"  
           min="0"
           defaultValue="0" />
-        <input
-          type="submit" 
-          value="Add to cart" 
-          className="btn" /> 
+
       </form> 
     )
   }

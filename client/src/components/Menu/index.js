@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MenuItems from './MenuItems';
-import ShoppingCart from './ShoppingCart';
 import './Menu.css';
 
 export default class Menu extends Component {
@@ -79,8 +78,7 @@ export default class Menu extends Component {
     return (
       <section className="content">
         <div className="container">
-          <ShoppingCart />
-          <div className="menutitle">MENU ITEMS</div>          
+          <div className="menutitle">HOTDAWG MENU</div>          
           <div className = "columns thirds">
             <MenuItems menuItems={ this.state.menuItems } /> 
           </div>

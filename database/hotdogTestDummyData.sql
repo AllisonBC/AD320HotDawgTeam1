@@ -69,17 +69,10 @@ VALUES (3,1),(3,2);
 INSERT INTO orders(userID, cartID, menuItemID, glutenFree, Vegan, quantity, orderPlaced)
 VALUES (3, 1, 1, 1, 1, 1, NOW());
 
+SELECT * FROM extratoppings;
+INSERT INTO orders
+VALUES (5, 2, 2, 1, 1, 0, 0, NOW(), DEFAULT, DEFAULT);
+INSERT INTO order_add_toppings (orderID, toppingID)
+VALUES (5,4),(5,3);
+
 SELECT * FROM orderFeed;
-/**
-## TODO: Make this a view!
-SELECT orderID, users.firstName, cartName, hotdogs.title, GROUP_CONCAT(extratoppings.title) AS `extra toppings`,
-	   quantity, glutenFree, vegan, orderPlaced, orderPaid, orderCompleted
-FROM orders
-	JOIN users USING (userID)
-    JOIN carts USING (cartID)
-    JOIN menuitems ON orders.menuItemID = menuitems.itemID
-    JOIN hotdogs USING (dogID)
-    LEFT JOIN order_add_toppings USING (orderID)
-    LEFT JOIN extratoppings USING (toppingID)
-GROUP BY orderID;
-**/

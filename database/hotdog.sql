@@ -125,7 +125,7 @@ CREATE TABLE order_add_toppings (
 );
 
 CREATE VIEW orderPrice AS
-SELECT orders.orderID, ( SUM(hotdogs.price) + COALESCE( SUM(extratoppings.addedCost), 0 ) + glutenFree + vegan ) AS price
+SELECT orders.orderID, (hotdogs.price + COALESCE(SUM(extratoppings.addedCost),0) + glutenFree + vegan) * orders.quantity AS totalPrice
 FROM orders
 	LEFT JOIN menuitems ON orders.menuItemID = menuitems.itemID
     LEFT JOIN hotdogs USING (dogID)
@@ -135,7 +135,7 @@ GROUP BY orderID;
 
 CREATE VIEW orderFeed AS
 SELECT orderID, users.firstName, carts.cartID, cartName, hotdogs.title, GROUP_CONCAT(extratoppings.title) AS `extra toppings`,
-	   quantity, glutenFree, vegan, orderPrice.price, orderPlaced, orderPaid, orderCompleted
+	   quantity, orders.glutenFree, orders.vegan, orderPrice.totalPrice, orderPlaced, orderPaid, orderCompleted
 FROM orders
 	JOIN users USING (userID)
     JOIN carts USING (cartID)

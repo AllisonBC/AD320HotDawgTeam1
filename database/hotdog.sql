@@ -124,6 +124,28 @@ CREATE TABLE order_add_toppings (
         ON DELETE NO ACTION					## Ideally orders will be dumped into a log before a topping is removed
 );
 
+CREATE VIEW orderPrice AS
+SELECT orders.orderID, (hotdogs.price + COALESCE(SUM(extratoppings.addedCost),0) + glutenFree + vegan) * orders.quantity AS totalPrice
+FROM orders
+	LEFT JOIN menuitems ON orders.menuItemID = menuitems.itemID
+    LEFT JOIN hotdogs USING (dogID)
+    LEFT JOIN order_add_toppings USING (orderID)
+    LEFT JOIN extratoppings USING (toppingID)
+GROUP BY orderID;
+
+CREATE VIEW orderFeed AS
+SELECT orderID, users.firstName, carts.cartID, cartName, hotdogs.title, GROUP_CONCAT(extratoppings.title) AS `extra toppings`,
+	   quantity, orders.glutenFree, orders.vegan, orderPrice.totalPrice, orderPlaced, orderPaid, orderCompleted
+FROM orders
+	JOIN users USING (userID)
+    JOIN carts USING (cartID)
+    JOIN menuitems ON orders.menuItemID = menuitems.itemID
+    JOIN hotdogs USING (dogID)
+    LEFT JOIN order_add_toppings USING (orderID)
+    LEFT JOIN extratoppings USING (toppingID)
+    JOIN orderPrice USING (orderID)
+GROUP BY orderID;
+
 
 
 

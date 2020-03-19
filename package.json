@@ -1,0 +1,29 @@
+{
+  "name": "ad320hotdawgteam1",
+  "version": "1.0.0",
+  "description": "Group development hot dog vendor project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllisonBC/AD320HotDawgTeam1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllisonBC/AD320HotDawgTeam1/issues"
+  },
+  "homepage": "https://github.com/AllisonBC/AD320HotDawgTeam1#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "mysql": "^2.18.1",
+    "test-mysql": "file:express"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

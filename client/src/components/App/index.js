@@ -24,7 +24,7 @@ const App = () => {
         {/* Uses a transparent header that draws on top of the layout's background */}
         <div style={{ height: "250px" }}>
           <Layout
-            style={{ background: "url(/seattlenight.jpg) center / cover" }}
+            style={{ background: "url(/BackGroundAndLogo.png) center / cover" }}
           >
             <Header
               transparent

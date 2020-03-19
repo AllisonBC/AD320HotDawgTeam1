@@ -5,11 +5,10 @@ import OrderHistory from "./OrderHistory";
 import CurrentOrders from "./OrderHistory";
 import CartMenu from "./CartMenu";
 import UpdateLocation from "./UpdateLocation";
-import SelectCart from "./SelectCart";
 
 import "./VendorLanding.css";
 
-export default class AdminLanding extends Component {
+export default class VendorLanding extends Component {
   state = 
   { 
     vendorUserInfo: 
@@ -26,20 +25,19 @@ export default class AdminLanding extends Component {
             <ul>
               <li className="vendorUsername">Welcome,</li>
               <li className="vendorUsername">{ this.state.vendorUserInfo.name }</li>
-              <Link to="/current_orders">Current Orders</Link>
-              <Link to="/order_history">Order History</Link>
-              <Link to="/cart_menu">Cart Menu</Link>
-              <Link to="/update_location">Update Location</Link>
+              <Link to="/vendorid_current_orders">Current Orders</Link>
+              <Link to="/vendorid_order_history">Order History</Link>
+              <Link to="/vendorid_cart_menu">Cart Menu</Link>
+              <Link to="/vendorid_update_location">Update Location</Link>
 
             </ul>
             <input type="submit" value="Logout" className="btn" />
           </nav>
         </div>
-        <Route path="/vendor" component={ SelectCart } />
-        <Route path="/current_orders" component={ CurrentOrders } />
-        <Route path="/order_history" component={ OrderHistory } />
-        <Route path="/cart_menu" component={ CartMenu } />
-        <Route path="/update_location" component={ UpdateLocation } />
+        <Route path="/vendorid_current_orders" component={ CurrentOrders } />
+        <Route path="/vendorid_order_history" component={ OrderHistory } />
+        <Route path="/vendorid_cart_menu" component={ CartMenu } />
+        <Route path="/vendorid_update_location" component={ UpdateLocation } />
 
       </Router>
     );

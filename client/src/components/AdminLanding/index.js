@@ -11,6 +11,14 @@ import SelectCart from "./SelectCart";
 import "./Admin.css";
 
 export default class AdminLanding extends Component {
+  state = 
+  { 
+    adminUserInfo: 
+      {
+        id: 1,
+        name: 'Admin-McAdminFace'
+      },
+    }
   render() {
     return (
       <Router>
@@ -18,7 +26,7 @@ export default class AdminLanding extends Component {
           <nav className="nav">
             <ul>
               <li className="adminUsername">Welcome,</li>
-              <li className="adminUsername">@AdminUserName</li>
+              <li className="adminUsername">{ this.state.adminUserInfo.name }</li>
               <Link to="/current_orders">Current Orders</Link>
               <Link to="/order_history">Order History</Link>
               <Link to="/cart_menu">Cart Menu</Link>

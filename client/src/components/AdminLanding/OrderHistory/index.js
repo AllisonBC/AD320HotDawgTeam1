@@ -1,20 +1,17 @@
 import React, { Component } from 'react'
 
+import OrderHistList from './OrderHistList';
+import './OrderHistory.css'
+
 export default class OrderHistory extends Component {
   state = 
     { 
-      adminUserInfo: 
-        {
-          id: 1,
-          name: 'Admin-McAdminface'
-        },
-      orderInfo: 
+      orderHistInfo: 
       [
         {
           id: 123456,
-          scheduledOrderPickupTime: '12:00 p.m.',
-          orderComplete: true,
-          orderPickedUp: true,
+          orderDate: 1/1/20,
+          orderRating: 5,
           orderVendorCartInfo: 
             {
               id: 1,
@@ -23,9 +20,8 @@ export default class OrderHistory extends Component {
         },
         {
           id: 123457,
-          scheduledOrderPickupTime: '12:00 p.m.',
-          orderComplete: true,
-          orderPickedUp: true,
+          orderDate: 1/1/20,
+          orderRating: 3,
           orderVendorCartInfo: 
             {
               id: 2,
@@ -34,9 +30,8 @@ export default class OrderHistory extends Component {
         },
         {
           id: 123458,
-          scheduledOrderPickupTime: '12:00 p.m.',
-          orderComplete: true,
-          orderPickedUp: true,
+          orderDate: 1/1/20,
+          orderRating: 5,
           orderVendorCartInfo: 
             {
               id: 3,
@@ -45,9 +40,8 @@ export default class OrderHistory extends Component {
         },
         {
           id: 123459,
-          scheduledOrderPickupTime: '12:00 p.m.',
-          orderComplete: true,
-          orderPickedUp: true,
+          orderDate: 1/1/20,
+          orderRating: 4,
           orderVendorCartInfo: 
             {
               id: 4,
@@ -58,10 +52,11 @@ export default class OrderHistory extends Component {
     }
   render() {
     return (
-      <h1>
-        Order History
-        
-      </h1>
+      <div className="l-page">
+        <OrderHistList orderHistList={ this.state.orderHistInfo }/>
+      </div> 
     )
   }
 }
+
+

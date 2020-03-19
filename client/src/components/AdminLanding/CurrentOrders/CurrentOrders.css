@@ -1,0 +1,32 @@
+.band-head {
+  margin-bottom: 5px;
+  padding: 0 0 10px;
+  color: black;
+  font-size: 32px;
+}
+  
+.band-body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 17px;
+}
+
+.band-container {
+  background-color: white;
+  border-radius: 10%;
+  left: 0;
+  right: 0;
+  margin: 5px auto;
+  min-height: 10vh;
+  max-width: 960px;
+  display: table;
+  position: relative;
+  padding: 0 3em;
+}
+
+.band-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3em 0 4em;
+}

@@ -8,7 +8,7 @@ import { Email } from "./Email";
 import { SignInEmail } from "./SignInEmail";
 import { VendorButton } from "./Button";
 
-export const Vendor = () => {
+export const VendorSignIn = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");

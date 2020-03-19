@@ -20,11 +20,8 @@ export default class MenuItem extends Component {
         <div className = "item-body">
           { this.props.menuItem.description }        
         </div>
-        <QuantityIncrementor updateQuantity={ this.updateQuantity } />
-        <input
-          type="submit" 
-          value="Add to cart" 
-          className="btn" /> 
+        <QuantityIncrementor />
+
       </div>
     )
   }

@@ -2,15 +2,26 @@ import React, { Component } from 'react';
 
 
 export default class QuantityIncrementor extends Component {
-  state = { quantity: 0 };
+  constructor(props){
+    super(props);
+    this.state = { 
+      quantity: 0 
+    };
 
-  onSubmit = (event) => {
-    event.preventDefault();
-    this.props.updateQuantity(this.state.quantity);
-    console.log(this.menuItem.quantity);
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange = (event) => this.setState({ quantity: event.target.value });
+  onChange (event) {
+    this.setState({ quantity: event.target.value });
+  }
+
+  onSubmit (event) {    
+    console.log(this.state.quantity);
+    event.preventDefault();
+  }
+
+
 
   render() {
     return (
@@ -20,8 +31,12 @@ export default class QuantityIncrementor extends Component {
           id="quantity"
           className="quantity"  
           min="0"
-          defaultValue="0" />
-
+          value={ this.state.quantity }
+          onChange={ this.onChange } />
+        <input
+          type="submit" 
+          value="Add to cart" 
+          className="btn" /> 
       </form> 
     )
   }

@@ -43,7 +43,8 @@ FROM carts
 INSERT INTO users(firstName, email)
 VALUES
 	("savedUser", "saved@user.com"),
-    ("guestUser", NULL);
+    ("guestUser", NULL),
+    ("ThirdUser", "third@user.com");
 SELECT * FROM users;
 
 DELETE FROM orders;
@@ -63,6 +64,13 @@ VALUES (2, 2, 1, 1, NOW() );
 INSERT INTO order_add_toppings (orderID, toppingID)
 VALUES (3,1),(3,2);
 
+
+## Third User wants a gluten free vegan classic
+INSERT INTO orders(userID, cartID, menuItemID, glutenFree, Vegan, quantity, orderPlaced)
+VALUES (3, 1, 1, 1, 1, 1, NOW());
+
+SELECT * FROM orderFeed;
+/**
 ## TODO: Make this a view!
 SELECT orderID, users.firstName, cartName, hotdogs.title, GROUP_CONCAT(extratoppings.title) AS `extra toppings`,
 	   quantity, glutenFree, vegan, orderPlaced, orderPaid, orderCompleted
@@ -74,3 +82,4 @@ FROM orders
     LEFT JOIN order_add_toppings USING (orderID)
     LEFT JOIN extratoppings USING (toppingID)
 GROUP BY orderID;
+**/

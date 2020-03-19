@@ -6,7 +6,8 @@ import "./App.css";
 import Home from "../Home";
 import { AdminSignIn } from "../AdminSignIn/index";
 import AdminLanding from "../AdminLanding/index";
-import { Vendor } from "../Vendor/index";
+import { VendorSignIn } from "../VendorSignIn/index";
+import VendorLanding from "../VendorLanding/index";
 import Menu from "../Menu";
 import About from "../About";
 import Contact from "../Contact";
@@ -51,15 +52,11 @@ const App = () => {
                 <Route path="/about" exact strict component={About} />
                 <Route path="/contact" exact strict component={Contact} />
                 <Route path="/admin" exact strict component={AdminSignIn} />
-                <Route path="/vendor" exact strict component={Vendor} />
+                <Route path="/vendor" exact strict component={VendorSignIn} />
                 <Route path="/menu" exact strict component={Menu} />
                 <Route path="/cart" exact strict component={ShoppingCart} />
-                <Route
-                  path="/adminLanding"
-                  exact
-                  strict
-                  component={AdminLanding}
-                />
+                <Route path="/adminLanding" exact strict component={ AdminLanding } />
+                <Route path="/vendorLanding" exact strict component={ VendorLanding } />
               </div>
             </Content>
           </Layout>
